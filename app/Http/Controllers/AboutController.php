@@ -11,9 +11,9 @@ class AboutController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function about()
     {
-        //
+        return "NIM: 2141720115, Nama: Rizaldy Ali Machfuddin";
     }
 
     /**

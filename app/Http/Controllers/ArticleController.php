@@ -11,9 +11,9 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function article($id)
     {
-        //
+        return "Halaman Artikel dengan ID $id";
     }
 
     /**
