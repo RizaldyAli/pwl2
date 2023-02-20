@@ -29,4 +29,5 @@ Route::get('/articles/{id}', function ($id) {
     return "Halaman Artikel dengan ID $id";
 });
 
+
     
