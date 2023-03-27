@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return '--- Selamat Datang ---';
+        return 'ini kontak saya 0895366999576';
     }
 
     /**
