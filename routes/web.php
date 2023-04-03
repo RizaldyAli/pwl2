@@ -9,6 +9,7 @@ use App\Http\Controllers\HobiController;
 use App\Http\Controllers\Home2Controller;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KuliahController;
+use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Auth;
@@ -162,8 +163,12 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/profile', [ProfileController::class, 'index']);
     Route::get('/kuliah', [KuliahController::class, 'index']);
 
+
     // PRAKTIKUM MINGGU 4
     Route::get('/hobi', [HobiController::class, 'index']);
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+    //PRAKTIKUM MINGGU 7
+    Route::resource('/mahasiswa', MahasiswaController::class)->parameter('mahasiswa', 'id');
 });
