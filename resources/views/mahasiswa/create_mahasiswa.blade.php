@@ -109,6 +109,18 @@
                       @enderror
                     </div>
                     <div class="form-group">
+                      <label>Prodi</label>
+                      
+                      <select class="form-control @error('prodi_id') is-invalid @enderror" name="prodi_id" >
+                      @foreach($prodi as $p)
+                      <option value="{{ $p->prodi_id}}"> {{ $p->prodi}}</option>
+                      @endforeach
+                      </select>
+                      @error('prodi')
+                        <span class="error invalid-feedback">{{ $message }} </span>
+                      @enderror
+                    </div>
+                    <div class="form-group">
                       <label>JK</label>
                       <input class="form-control @error('jk') is-invalid @enderror" value="{{ isset($mhs)? $mhs->jk : old('jk') }}" name="jk" type="text"/>
                       @error('jk')
